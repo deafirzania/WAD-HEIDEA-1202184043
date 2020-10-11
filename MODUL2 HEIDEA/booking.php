@@ -48,12 +48,9 @@
                         <div class="form-group row">
                             <label for="roomtype">Room Type</label>
                             <select class="form-control" id="" name="roomtype">
-                                <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQz-87ki60ycOwyo1b-3Us3GT1kwIsxZ3jesA&usqp=CAU">
-                                Standard</option>
-                                <option value="https://www.watermark-bali.com/wp-content/uploads/2017/09/superior-room2.jpg">
-                                Superior</option>
-                                <option value="https://flh.ca/media/44731/executive-luxury_1170x650.jpg?width=848&maxwidth=848">
-                                Luxury</option>
+                                <option>Standard</option>
+                                <option>Superior</option>
+                                <option>Luxury</option>
                             </select>
                         </div>
                         Add Service(s)
@@ -75,9 +72,7 @@
                             <input type="tel" class="form-control" name="nohp">
                         </div>
 
-                        <a href="mybooking.php" class="btn btn-primary btn-lg btn-block">
-                            Book
-                        </a>
+                        <button class="btn btn-block btn-primary" type="submit" value="kirim">Book</button>
 
                     </div>
                     <div class="col-md-5 ml-md-auto">

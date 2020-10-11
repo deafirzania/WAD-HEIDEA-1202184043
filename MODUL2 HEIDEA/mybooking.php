@@ -7,12 +7,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         
-        <!-- <?php
+        <?php
+        error_reporting(E_ERROR | E_PARSE);
         $bookingnumber = rand();
         $nama = $_POST['name'];
         $checkin = $_POST['checkin'];
         $duration = $_POST['duration'];
-        $checkout =  date('m/d/y', strtotime($check . ' + ' . $_GET['duration'] . 'days'));
+        $checkout =  date('m/d/y', strtotime($check . ' + ' .$duration . 'days'));
         $roomtype = $_POST['roomtype'];
         $nohp = $_POST['nohp'];
         $service1 = $_POST['roomservice'];
@@ -26,7 +27,7 @@
          else{
              $total = (200*$duration)+$servicebill;
          }
-        ?> -->
+        ?>
         
         <title>
             EAD HOTEL - My Booking
