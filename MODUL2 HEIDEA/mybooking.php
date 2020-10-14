@@ -8,9 +8,9 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         
         <?php
-        error_reporting(E_ERROR | E_PARSE);
+        
         $bookingnumber = rand();
-        $nama = $_POST['name'];
+        $_nama = $_POST['name'];
         $checkin = $_POST['checkin'];
         $duration = $_POST['duration'];
         $checkout =  date('m/d/y', strtotime($check . ' + ' .$duration . 'days'));
@@ -20,7 +20,7 @@
         
         $total;
         if($roomtype == "standard") {
-            $total = (90*$duration)+$servicebill;
+            $total = (900*$duration)+$servicebill;
          } elseif($roomtype == "superior"){
              $total = (150*$duration)+$servicebill;   
          }
