@@ -57,7 +57,7 @@
                 <li class="nav-item d-flex align-items-center mr-2">
                     
                     <a href="cart.php">
-                        <img src="images/cart.png" width="50px" alt="cart">                </a>
+                        <img src="images/cart.jpeg" width="50px" alt="cart">                </a>
                 </li>
 
                 <li class="nav-item dropdown mr-4">

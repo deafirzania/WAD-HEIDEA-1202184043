@@ -29,18 +29,20 @@
         $nama = $request['nama'];
         $email = $request['email'];
         $no_hp = $request['nohp'];
-        $password = mysqli_real_escape_string($conn, $request['password']);
-        $passwordConfirm = mysqli_real_escape_string($conn, $request['passconf']);
+        $password = $request['password'];
+        $passwordConfirm = $request['passconf'];
 
-        $emailCek = "SELECT email FROM user WHERE email='$email'";
+        $emailCek = "SELECT * FROM user WHERE email='$email'";
         $select = mysqli_query($conn, $emailCek);
+    
 
         if (!mysqli_fetch_assoc($select)) {
             
             if ($password == $passwordConfirm) {
                 
-                $query = "INSERT INTO user VALUES ('', '$nama', '$email', '$no_hp', '$password')";
-                mysqli_query($conn, $query);
+                $query = "INSERT INTO user (id,nama,email,no_hp,password) 
+                VALUES (NULL, '$nama', '$email', '$no_hp', '$password')";
+                mysqli_query($conn, $query); 
                 
                 $_SESSION['message'] = 'Berhasil registrasi';
 
@@ -65,6 +67,8 @@
         $emailCek = "SELECT * FROM user 
         WHERE email= '$email'";
         $select = mysqli_query($conn, $emailCek);
+
+        var_dump($select);
 
         if (mysqli_num_rows($select)==1) {
             $result = mysqli_fetch_assoc($select);
@@ -105,7 +109,7 @@
         $harga = $_GET['harga'];
         $produk = $_GET['produk'];
 
-        $insert = "INSERT INTO cart VALUES ('','$user_id','$produk','$harga')";
+        $insert = "INSERT INTO cart VALUES (NULL,'$user_id','$produk','$harga')";
         mysqli_query($conn, $insert);
 
         $_SESSION['message'] = 'Berhasil ditambah';
@@ -128,17 +132,16 @@
         return mysqli_affected_rows($conn);
     }
 
-    function show()
+    function tampilan()
     {
         global $conn;
 
         $user_id = $_SESSION['id'];
 
         $select = "SELECT * FROM cart WHERE user_id='$user_id'";
-        $result = mysqli_query($conn, $select);
         $carts = null;
 
-        while ($cart = mysqli_fetch_assoc($result)) {
+        while ($cart = mysqli_fetch_asocc($result)){
             $carts[] = $cart;
         }
 
@@ -160,12 +163,12 @@
         $nama = $request['nama'];
         $no_hp = $request['nohp'];
 
-        if (empty($request['password'])) {
+        if (empty($request['pass'])) {
             $query = "UPDATE user SET nama = '$nama', no_hp = '$no_hp' WHERE id='$id'";
         
         } else {
-            $password = mysqli_real_escape_string($conn, $request['pass']);
-            $password_confirm = mysqli_real_escape_string($conn, $request['passconf']);
+            $password = $request['pass'];
+            $password_confirm = $request['passconf'];
 
             if ($password == $password_confirm) {
 

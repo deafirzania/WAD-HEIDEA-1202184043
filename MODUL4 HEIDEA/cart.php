@@ -2,7 +2,7 @@
 
     include ("config.php");
     if (isset($_SESSION['email'])) {
-        list($carts, $totalHarga) = show();
+        list($carts, $totalHarga) = tampilan();
     } 
     else {
         header("Location: login.php");
@@ -100,13 +100,21 @@
 
                             <tr>
                                 <th scope="row"><?= $i; ?></th>
-                                <td><?= $cart['nama_barang']; ?></td>
-                                <td>Rp<?= $cart['harga']; ?></td>
-                                <td><a href="config.php?id=<?= $cart['id']; ?>" class="btn btn-danger btn-sm" role="button" name="hapus">
+                                <td>
+                                    <?= $cart['nama_barang']; ?>
+                                </td>
+                                <td>Rp
+                                    <?= $cart['harga']; ?>
+                                </td>
+                                <td>
+                                    <a href="config.php?id=<?= $cart['id']; ?>" 
+                                        class="btn btn-danger btn-sm" role="button" name="hapus">
                                         Hapus
-                                    </a></td>
+                                    </a>
+                                </td>
                             </tr>
                         <?php
+
                             $i++;
                         }
 

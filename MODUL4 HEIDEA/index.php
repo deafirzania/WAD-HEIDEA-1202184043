@@ -30,7 +30,8 @@
             <ul class="navbar-nav font-weight-bold ml-auto mt-2 mt-lg-0">
                 <li class="nav-item d-flex align-items-center mr-2">
                     <a href="cart.php">
-                        <img src="images/cart1.jpeg" width="50px" alt="cart">                </a>
+                        <img src="images/cart1.jpeg" width="50px" alt="cart">                
+                    </a>
                 </li>
 
                 <li class="nav-item dropdown mr-4">

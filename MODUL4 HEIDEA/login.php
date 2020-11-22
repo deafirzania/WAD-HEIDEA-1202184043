@@ -7,7 +7,7 @@
 
     if (!empty($_COOKIE['remember'])) {
         $email = $_COOKIE['email'];
-        $password = $_COOKIE['pass'];
+        $password = $_COOKIE['password'];
         $rememberMe = $_COOKIE['remember'];
     } else {
         $email = null;
@@ -105,6 +105,7 @@
         </div>
         </div>
         </div>
+        
     </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

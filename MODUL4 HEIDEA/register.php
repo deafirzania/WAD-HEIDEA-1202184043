@@ -11,6 +11,7 @@
         registrasi($_POST);
     }
 
+
 ?>
 
 <!doctype html>
