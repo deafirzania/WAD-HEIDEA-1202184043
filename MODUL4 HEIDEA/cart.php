@@ -22,7 +22,7 @@
 
     <body>
     <nav class="navbar navbar-expand-lg navbar navbar navbar-dark bg-light">
-        <a class="navbar-brand text-dark" href="indexx.php">WAD Beauty</a>
+        <a class="navbar-brand text-dark" href="index.php">WAD Beauty</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" 
             data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" 

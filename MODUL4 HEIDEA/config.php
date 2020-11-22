@@ -60,7 +60,7 @@
     {
         global $conn;
         $email = $request['emaill'];
-        $password = $request['pass'];
+        $password = $request['password'];
 
         $emailCek = "SELECT * FROM user 
         WHERE email= '$email'";
@@ -88,7 +88,7 @@
                 }
 
                 $_SESSION['message'] = 'Berhasil Login';
-                header("Location: indexx.php");
+                header("Location: index.php");
 
             }else{
 
@@ -160,7 +160,7 @@
         $nama = $request['nama'];
         $no_hp = $request['nohp'];
 
-        if (empty($request['pass'])) {
+        if (empty($request['password'])) {
             $query = "UPDATE user SET nama = '$nama', no_hp = '$no_hp' WHERE id='$id'";
         
         } else {
