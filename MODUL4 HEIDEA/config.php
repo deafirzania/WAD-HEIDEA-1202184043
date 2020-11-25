@@ -15,7 +15,7 @@
 
     if (!empty($_GET['logout'])) {
         if ($_GET['logout'] == 'yes') {
-            session_unset();
+            session_set();
             session_destroy();
             
             header("Location: login.php");
@@ -38,7 +38,7 @@
 
         if (!mysqli_fetch_assoc($select)) {
             
-            if ($password == $passwordConfirm) {
+            if ($password !== $passwordConfirm) {
                 
                 $query = "INSERT INTO user (id,nama,email,no_hp,password) 
                 VALUES (NULL, '$nama', '$email', '$no_hp', '$password')";

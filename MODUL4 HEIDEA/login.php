@@ -7,7 +7,7 @@
 
     if (!empty($_COOKIE['remember'])) {
         $email = $_COOKIE['email'];
-        $password = $_COOKIE['password'];
+        $password = $_COOKIESS['password'];
         $rememberMe = $_COOKIE['remember'];
     } else {
         $email = null;
