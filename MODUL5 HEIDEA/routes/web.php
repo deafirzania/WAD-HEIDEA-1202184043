@@ -21,30 +21,21 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/product', function () {
-    return view('product');
+Route::get('/products', function () {
+    return view('products');
 })->name('product');
 
-Route::get('/order', function () {
-    return view('order');
+Route::get('/orders', function () {
+    return view('orders');
 })->name('order');
 
 Route::get('/history', function () {
     return view('history');
-})->name('hostory');
+})->name('history');
 
 
-Route::get('/product/add', 'App\Http\Controllers\ProductController@addIndex')
-->name('addIndex');
-Route::post('/product/add', 'App\Http\Controllers\ProductController@addProduct')
-->name('addProduct');
-Route::get('/product/add/{id}', 'App\Http\Controllers\ProductController@updateIndex')
-->name('updateIndex');
-Route::post('/product/add/{id}', 'App\Http\Controllers\ProductController@updateProduct')
-->name('updateProduct');
-Route::post('/product/delete', 'App\Http\Controllers\ProductController@delete')
-->name('delete');
-Route::get('/order/detailorder/{id}', 'App\Http\Controllers\OrderController@detailorder')
-->name('detailorder');
-Route::post('/order/detailorder/add', 'App\Http\Controllers\OrderController@detailorderadd')
-->name('detailorderadd');
+Route::get('/addproducts', 'productsController@add');
+Route::post('/addproducts', 'productsController@adds');
+Route::get('/updateproduct/{id}', 'productsController@update');
+Route::put('/updateproducts/{id}', 'productsController@updates');
+Route::get('/deleteproduct/{id}', 'productsController@delete');

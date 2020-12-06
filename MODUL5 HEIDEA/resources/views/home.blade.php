@@ -17,8 +17,8 @@
             <div class="collapse navbar-collapse d-flex justify-content-center">
             <div class="navbar-nav">
                 <a class="nav-link active" href="/">HOME</a>
-                <a class="nav-link active" href="/product">PRODUCT</a>
-                <a class="nav-link active" href="/order">ORDER</a>
+                <a class="nav-link active" href="/products">PRODUCT</a>
+                <a class="nav-link active" href="/orders">ORDER</a>
                 <a class="nav-link active" href="/history">HISTORY</a>
             </div>
             </div>
