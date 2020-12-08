@@ -13,29 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
     return view('home');
-})->name('home');
-
-Route::get('/products', function () {
-    return view('products');
-})->name('product');
-
-Route::get('/orders', function () {
-    return view('orders');
-})->name('order');
+});
 
 Route::get('/history', function () {
     return view('history');
-})->name('history');
+});
 
-
-Route::get('/addproducts', 'productsController@add');
-Route::post('/addproducts', 'productsController@adds');
+Route::get('/products', 'productsController@index');
+Route::get('/addproduct', 'productsController@add');
+Route::post('/addproduct', 'productsController@adds');
 Route::get('/updateproduct/{id}', 'productsController@update');
 Route::put('/updateproducts/{id}', 'productsController@updates');
 Route::get('/deleteproduct/{id}', 'productsController@delete');
+Route::get('/orders', 'ordersController@index');

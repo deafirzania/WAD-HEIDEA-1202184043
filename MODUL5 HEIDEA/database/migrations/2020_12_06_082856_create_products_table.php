@@ -13,6 +13,7 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
+        // Membuat table
         Schema::create('products', function (Blueprint $table) {
             $table->unsignedBigInteger('id');
             $table->string('name');
@@ -20,7 +21,6 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->integer('stock');
             $table->text('img_path');
-
         });
     }
 
@@ -32,5 +32,6 @@ class CreateProductsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('products');
+        
     }
 }
